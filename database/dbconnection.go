@@ -29,7 +29,7 @@ func Connection() {
 		log.Fatal(err)
 	}
 	db.SingularTable(true)
-	// db.DropTableIfExists(&models.Users{})
+	db.DropTableIfExists(&models.Users{})
 	db.AutoMigrate(&models.Users{})
 	DB = db
 }
